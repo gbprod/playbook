@@ -3,7 +3,7 @@ $bar-height: 150;
 $bar-diagonal: sqrt(pow($bar-with, 2) + pow($bar-height, 2));
 $bar-diagonal-angle: atan($bar-height / $bar-with);
 
-$small-bar-with: 20;
+$small-bar-with: 22;
 $small-bar-height: 15;
 $small-bar-diagonal: sqrt(pow($small-bar-with, 2) + pow($small-bar-height, 2));
 $small-bar-diagonal-angle: atan($small-bar-height / $small-bar-with);

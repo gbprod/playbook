@@ -1,5 +1,5 @@
 import React from "react";
-import { H5 } from "@blueprintjs/core";
+import { H3 } from "@blueprintjs/core";
 import { Schema } from "../containers/types";
 
 interface ChordSchemasProps {
@@ -7,8 +7,8 @@ interface ChordSchemasProps {
 }
 
 export const ChordSchemas: React.FC<ChordSchemasProps> = ({ schemas }) => (
-  <>
-    <H5>Accords</H5>
+  <div>
+    <H3>Accords</H3>
     <div>
       {schemas.map((schema, index) => (
         <div key={index}>
@@ -16,5 +16,5 @@ export const ChordSchemas: React.FC<ChordSchemasProps> = ({ schemas }) => (
         </div>
       ))}
     </div>
-  </>
+  </div>
 );

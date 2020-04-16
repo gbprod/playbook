@@ -1,5 +1,10 @@
 @import-normalize;
 
+@font-face {
+  font-family: OpenDyslexic;
+  src: url("./styles/fonts//OpenDyslexic-Regular.otf") format("opentype");
+}
+
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
@@ -7,5 +12,6 @@
 @import "styles/grid4.scss";
 
 body {
-  padding-top: 60px;
+  padding: 60px 0 0 0;
+  margin: 0;
 }

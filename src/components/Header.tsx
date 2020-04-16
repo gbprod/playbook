@@ -7,10 +7,10 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ song }) => (
-  <header>
+  <>
     <H2>
       {song.title} - {song.artist}
     </H2>
     {song.capo && <Tag>Capo {song.capo}</Tag>}
-  </header>
+  </>
 );

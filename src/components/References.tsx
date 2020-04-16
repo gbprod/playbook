@@ -1,5 +1,5 @@
 import React from "react";
-import { H5 } from "@blueprintjs/core";
+import { H3 } from "@blueprintjs/core";
 
 interface ReferencesProps {
   references: string[];
@@ -7,7 +7,7 @@ interface ReferencesProps {
 
 export const References: React.FC<ReferencesProps> = ({ references }) => (
   <div>
-    <H5>Références</H5>
+    <H3>Références</H3>
     <ul>
       {references.map(function (reference, index) {
         return (

@@ -1,17 +1,18 @@
 import {
   Navbar as BaseNavbar,
-  NavbarDivider,
   NavbarGroup,
   NavbarHeading,
 } from "@blueprintjs/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar: React.FC<{}> = () => {
   return (
     <BaseNavbar fixedToTop>
       <NavbarGroup>
-        <NavbarHeading>Playbook</NavbarHeading>
-        <NavbarDivider />
+        <NavbarHeading>
+          <Link to="/">Playbook </Link>
+        </NavbarHeading>
       </NavbarGroup>
     </BaseNavbar>
   );

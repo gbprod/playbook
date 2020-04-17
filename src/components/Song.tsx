@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Actions } from "./Actions";
 import { Song as SongType } from "../containers/types";
 import { Header } from "./Header";
 import { ChordGrid } from "./ChordGrid";
@@ -7,7 +8,6 @@ import { Lyrics } from "./Lyrics";
 import { ChordSchemas } from "./ChordSchemas";
 import { References } from "./References";
 import "./Song.scss";
-import { Actions } from "./Actions";
 
 interface SongProps {
   song: SongType;
@@ -23,7 +23,6 @@ export const Song: React.FC<SongProps> = ({ song }) => {
   });
 
   const onUpdate = (newSettings: SongSettings) => {
-    console.log(settings.lyricsFontSize);
     setSettings(newSettings);
   };
 

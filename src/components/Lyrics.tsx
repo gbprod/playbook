@@ -4,12 +4,13 @@ import "./Lyrics.scss";
 
 interface LyricsProps {
   text: Array<string[]>;
+  fontSize: number;
 }
 
-export const Lyrics: React.FC<LyricsProps> = ({ text }) => (
+export const Lyrics: React.FC<LyricsProps> = ({ text, fontSize }) => (
   <div>
     <H3>Paroles</H3>
-    <div className="lyrics">
+    <div className="lyrics" style={{ fontSize: `${fontSize}px` }}>
       {text.map((paragraphe, index) => (
         <p key={index}>
           {paragraphe.map((line, index) => (

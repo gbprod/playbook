@@ -69,9 +69,13 @@ $small-mobile-bar-diagonal-angle: atan(
   .chord-grid {
     --bar-width: #{$mobile-bar-with * 2}vw;
     --phrase-width: calc(var(--bar-width) * 2);
+    --bar-height: #{$mobile-bar-height * 2}vw;
+    --bar-diagonal: #{$mobile-bar-diagonal * 2}vw;
 
     &.small {
       --bar-width: #{$small-mobile-bar-with * 2}vw;
+      --bar-height: #{$small-mobile-bar-height * 2}vw;
+      --bar-diagonal: #{$small-mobile-bar-diagonal * 2}vw;
     }
   }
 }

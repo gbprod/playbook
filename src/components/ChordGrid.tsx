@@ -1,13 +1,15 @@
 import React from "react";
 import { Grid } from "../containers/types";
 import { Phrase } from "./Phrase";
+import clsx from "clsx";
 
 interface ChordGridProps {
   grid: Grid;
+  small: boolean;
 }
 
-export const ChordGrid: React.FC<ChordGridProps> = ({ grid }) => (
-  <div className="chord-grid">
+export const ChordGrid: React.FC<ChordGridProps> = ({ grid, small }) => (
+  <div className={clsx("chord-grid", small && "small")}>
     {grid.phrases.map((phrase, key) => (
       <Phrase phrase={phrase} key={key} />
     ))}

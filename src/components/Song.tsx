@@ -12,6 +12,7 @@ interface SongProps {
 }
 
 export interface SongSettings {
+  smallGrid: boolean;
   lyricsFontSize: number;
   gridVisible: boolean;
   lyricsVisible: boolean;
@@ -22,7 +23,8 @@ export interface SongSettings {
 
 export const Song: React.FC<SongProps> = ({ song }) => {
   const [settings, setSettings] = useState<SongSettings>({
-    lyricsFontSize: 14,
+    smallGrid: false,
+    lyricsFontSize: 16,
     gridVisible: true,
     lyricsVisible: true,
     notesVisible: true,
@@ -44,7 +46,7 @@ export const Song: React.FC<SongProps> = ({ song }) => {
       </header>
       {settings.gridVisible && (
         <article>
-          <ChordGrid grid={song.grid} />
+          <ChordGrid grid={song.grid} small={settings.smallGrid} />
         </article>
       )}
       {settings.lyricsVisible && (

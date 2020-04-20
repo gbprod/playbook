@@ -93,6 +93,16 @@ export const Actions: React.FC<ActionsProps> = ({ settings, onUpdate }) => {
             })
           }
         />
+        <Button
+          active={settings.smallGrid}
+          icon={settings.smallGrid ? "maximize" : "minimize"}
+          onClick={() =>
+            onUpdate({
+              ...settings,
+              smallGrid: !settings.smallGrid,
+            })
+          }
+        />
         <Popover content={visibilityMenu} position={Position.BOTTOM}>
           <AnchorButton rightIcon="caret-down" icon="eye-open"></AnchorButton>
         </Popover>

@@ -11,6 +11,7 @@ export type Song = {
   artist: string;
   capo: number;
   notes: string[];
+  tunning: string;
   references: string[];
   grid: Grid;
   schemas: Schema[];

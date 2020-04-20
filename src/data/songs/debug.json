@@ -1,6 +1,7 @@
 {
   "title": "Debug",
   "artist": "Tests et debug",
+  "tunning": "classic",
   "status": "working",
   "capo": 2,
   "references": [
@@ -133,5 +134,19 @@
         ]
       }
     ]
-  }
+  },
+  "schemas": [
+    {
+      "name": "B7",
+      "frets": "x21202"
+    },
+    {
+      "name": "B7",
+      "frets": "x21202"
+    },
+    {
+      "name": "B7",
+      "frets": "x21202"
+    }
+  ]
 }

@@ -1,20 +1,18 @@
 import React from "react";
-import { H3 } from "@blueprintjs/core";
 import { Schema } from "../containers/types";
+import "./ChordSchemas.scss";
+import { Code } from "@blueprintjs/core";
 
 interface ChordSchemasProps {
   schemas: Schema[];
 }
 
 export const ChordSchemas: React.FC<ChordSchemasProps> = ({ schemas }) => (
-  <div>
-    <H3>Accords</H3>
-    <div>
-      {schemas.map((schema, index) => (
-        <div key={index}>
-          {schema.name} : {schema.frets}
-        </div>
-      ))}
-    </div>
+  <div className="ChordSchemas">
+    {schemas.map((schema, index) => (
+      <Code className="ChordSchemas__chord" key={index}>
+        {schema.name}: {schema.frets}
+      </Code>
+    ))}
   </div>
 );

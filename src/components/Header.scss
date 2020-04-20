@@ -1,0 +1,19 @@
+.Header {
+  display: flex;
+  flex-flow: row wrap;
+  h2 {
+    flex: 1 100%;
+  }
+
+  &__subtitle {
+    margin: 0.2rem 0;
+  }
+
+  &__notes {
+    width: 15em;
+    margin-right: 1rem;
+  }
+  &__tags {
+    margin-bottom: 0.3rem;
+  }
+}

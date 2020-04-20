@@ -1,11 +1,13 @@
-import React from "react";
 import {
-  Popover,
-  Position,
+  AnchorButton,
   Button,
   ButtonGroup,
   Callout,
+  Popover,
+  Position,
+  Switch,
 } from "@blueprintjs/core";
+import React from "react";
 import { SongSettings } from "./Song";
 
 interface ActionsProps {
@@ -14,13 +16,66 @@ interface ActionsProps {
 }
 
 export const Actions: React.FC<ActionsProps> = ({ settings, onUpdate }) => {
-  const menu = (
-    <Callout title="Configuration">
+  const visibilityMenu = (
+    <Callout>
+      <Switch
+        checked={settings.gridVisible}
+        label="Grid"
+        onChange={() =>
+          onUpdate({
+            ...settings,
+            gridVisible: !settings.gridVisible,
+          })
+        }
+      />
+      <Switch
+        checked={settings.lyricsVisible}
+        label="Paroles"
+        onChange={() =>
+          onUpdate({
+            ...settings,
+            lyricsVisible: !settings.lyricsVisible,
+          })
+        }
+      />
+      <Switch
+        checked={settings.notesVisible}
+        label="Notes"
+        onChange={() =>
+          onUpdate({
+            ...settings,
+            notesVisible: !settings.notesVisible,
+          })
+        }
+      />
+      <Switch
+        checked={settings.chordsVisible}
+        label="Accords"
+        onChange={() =>
+          onUpdate({
+            ...settings,
+            chordsVisible: !settings.chordsVisible,
+          })
+        }
+      />
+      <Switch
+        checked={settings.referencesVisible}
+        label="Références"
+        onChange={() =>
+          onUpdate({
+            ...settings,
+            referencesVisible: !settings.referencesVisible,
+          })
+        }
+      />
+    </Callout>
+  );
+
+  return (
+    <div>
       <ButtonGroup>
         <Button
           icon="minus"
-          minimal
-          small
           onClick={() =>
             onUpdate({
               ...settings,
@@ -28,10 +83,9 @@ export const Actions: React.FC<ActionsProps> = ({ settings, onUpdate }) => {
             })
           }
         />
+        <Button active={false} icon="font" />
         <Button
           icon="plus"
-          minimal
-          small
           onClick={() =>
             onUpdate({
               ...settings,
@@ -39,14 +93,10 @@ export const Actions: React.FC<ActionsProps> = ({ settings, onUpdate }) => {
             })
           }
         />
+        <Popover content={visibilityMenu} position={Position.BOTTOM}>
+          <AnchorButton rightIcon="caret-down" icon="eye-open"></AnchorButton>
+        </Popover>
       </ButtonGroup>
-      Taille paroles
-    </Callout>
-  );
-
-  return (
-    <Popover content={menu} position={Position.LEFT_TOP}>
-      <Button minimal icon="cog" />
-    </Popover>
+    </div>
   );
 };

@@ -8,7 +8,7 @@ import {
   Switch,
 } from "@blueprintjs/core";
 import React from "react";
-import { SongSettings } from "./Song";
+import { SongSettings } from "../containers/types";
 
 interface ActionsProps {
   settings: SongSettings;

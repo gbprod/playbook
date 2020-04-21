@@ -42,3 +42,13 @@ export type BarChord = {
   name: string;
   beats: number;
 };
+
+export type SongSettings = {
+  smallGrid: boolean;
+  lyricsFontSize: number;
+  gridVisible: boolean;
+  lyricsVisible: boolean;
+  notesVisible: boolean;
+  chordsVisible: boolean;
+  referencesVisible: boolean;
+};

@@ -1,5 +1,3 @@
-- Persister SongSettings dans le localstorage
 - Impression
-- Mode small de la grid
 - Recherche
 - Liste plus jolie

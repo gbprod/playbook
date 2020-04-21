@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Song as SongType } from "../containers/types";
+import React from "react";
+import { Song as SongType, SongSettings } from "../containers/types";
 import { Actions } from "./Actions";
 import { ChordGrid } from "./ChordGrid";
 import { Header } from "./Header";
@@ -9,31 +9,17 @@ import "./Song.scss";
 
 interface SongProps {
   song: SongType;
+  settings: SongSettings;
+  updateSettings: (settings: SongSettings) => void;
 }
 
-export interface SongSettings {
-  smallGrid: boolean;
-  lyricsFontSize: number;
-  gridVisible: boolean;
-  lyricsVisible: boolean;
-  notesVisible: boolean;
-  chordsVisible: boolean;
-  referencesVisible: boolean;
-}
-
-export const Song: React.FC<SongProps> = ({ song }) => {
-  const [settings, setSettings] = useState<SongSettings>({
-    smallGrid: false,
-    lyricsFontSize: 16,
-    gridVisible: true,
-    lyricsVisible: true,
-    notesVisible: true,
-    chordsVisible: true,
-    referencesVisible: false,
-  });
-
+export const Song: React.FC<SongProps> = ({
+  song,
+  settings,
+  updateSettings,
+}) => {
   const onUpdate = (newSettings: SongSettings) => {
-    setSettings(newSettings);
+    updateSettings(newSettings);
   };
 
   return (

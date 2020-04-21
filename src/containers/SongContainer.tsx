@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { loadSong } from "./actions";
-import { Song as ISong } from "./types";
+import { loadSong, saveSettings, getSettings } from "./actions";
+import { Song as ISong, SongSettings } from "./types";
 import { useParams } from "react-router-dom";
 import { Song } from "../components";
 
 interface SongContainerParams {
-    id: string;
+  id: string;
 }
 
 export const SongContainer: React.FC<{}> = () => {
-    const [song, setSong] = useState<ISong>();
-    const { id } = useParams<SongContainerParams>();
+  const [song, setSong] = useState<ISong>();
+  const { id } = useParams<SongContainerParams>();
+  const [settings, setSettings] = useState<SongSettings>(getSettings(id));
 
-    useEffect(() => {
-        loadSong(id).then((values: ISong) => {
-            setSong(values);
-        });
-    }, [id]);
+  useEffect(() => {
+    loadSong(id).then((values: ISong) => {
+      setSong(values);
+    });
+  }, [id]);
 
-    return <>{song && <Song song={song} />}</>;
+  const updateSettings = (settings: SongSettings) => {
+    saveSettings(id, settings);
+    setSettings(settings);
+  };
+
+  return (
+    <>
+      {song && settings && (
+        <Song song={song} settings={settings} updateSettings={updateSettings} />
+      )}
+    </>
+  );
 };

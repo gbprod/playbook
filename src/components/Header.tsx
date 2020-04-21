@@ -1,8 +1,7 @@
 import { H2, Tag } from "@blueprintjs/core";
 import React from "react";
-import { Song } from "../containers/types";
+import { Song, SongSettings } from "../containers/types";
 import "./Header.scss";
-import { SongSettings } from "./Song";
 import { Notes } from "./Notes";
 import { ChordSchemas } from "./ChordSchemas";
 

@@ -1,2 +1,0 @@
-(this.webpackJsonpplaybook=this.webpackJsonpplaybook||[]).push([[3],{144:function(t){t.exports=JSON.parse('[{"id":"debug","title":"Debug","artist":"Tests et debug"},{"id":"lluba","title":"Lluba","artist":"Chant tzigane"},{"id":"jalouse","title":"Jalouse","artist":"Emilie Loizeau"},{"id":"morenita","title":"Morenita do brazil","artist":"Giuseppe Farrauto"}]')}}]);
-//# sourceMappingURL=3.0acef036.chunk.js.map

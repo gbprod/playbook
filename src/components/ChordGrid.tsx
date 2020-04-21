@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "../containers/types";
 import { Phrase } from "./Phrase";
 import clsx from "clsx";
+import "./ChordGrid.scss";
 
 interface ChordGridProps {
   grid: Grid;

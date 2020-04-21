@@ -28,6 +28,7 @@
 @media (max-width: 950px) {
   .Header {
     &__notes {
+      width: auto;
       flex: 1 0 100%;
     }
   }

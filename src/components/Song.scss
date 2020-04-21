@@ -1,44 +1,47 @@
 .song_wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
 
-    .actions {
-        padding: 0.5rem 1rem;
-        flex: 1 100%;
+  .actions {
+    padding: 0.5rem 1rem;
+    flex: 1 100%;
+    @media print {
+      display: none;
     }
+  }
 
-    header {
-        padding: 1rem;
-        flex: 1 100%;
+  header {
+    padding: 1rem;
+    flex: 1 100%;
+  }
+
+  article {
+    padding: 1rem;
+    flex: 1 0 0;
+  }
+
+  aside {
+    padding: 1rem;
+    flex: 3 0px;
+
+    & > div {
+      margin-bottom: 1rem;
     }
+  }
+  footer {
+    padding: 1rem;
+    flex: 1 100%;
+  }
 
-    article {
-        padding: 1rem;
-        flex: 1 0 0;
+  @media (max-width: 1280px) {
+    main {
+      flex: 1 100%;
+      justify-content: center;
     }
 
     aside {
-        padding: 1rem;
-        flex: 3 0px;
-
-        & > div {
-            margin-bottom: 1rem;
-        }
+      flex: 1 100%;
     }
-    footer {
-        padding: 1rem;
-        flex: 1 100%;
-    }
-
-    @media (max-width: 1280px) {
-        main {
-            flex: 1 100%;
-            justify-content: center;
-        }
-
-        aside {
-            flex: 1 100%;
-        }
-    }
+  }
 }

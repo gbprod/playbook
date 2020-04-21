@@ -1,6 +1,7 @@
 .Header {
   display: flex;
   flex-flow: row wrap;
+
   h2 {
     flex: 1 100%;
   }
@@ -13,7 +14,21 @@
     width: 25rem;
     margin-right: 1rem;
   }
+
   &__tags {
-    margin-bottom: 0.3rem;
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  &__tag {
+    margin: 0 0.2rem 0.3rem 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .Header {
+    &__notes {
+      flex: 1 0 100%;
+    }
   }
 }
